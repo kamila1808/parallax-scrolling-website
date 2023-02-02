@@ -7,7 +7,7 @@
 :root {
   --index: calc(1vw + 1vh);
   --text: #e7e7e0;
-  --transition: transform .75s cubic-bezier(0.075, 0.5, 0.000, 1)
+  --transition: transform .75s cubic-bezier(0.075, 0.5, 0, 1)
 }
 
 @font-face {
@@ -112,6 +112,8 @@ body {
   text-align: center;
   transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
   will-change: transform;
+  top: -1px;
+  z-index: 10;
 }
 
 .main-article__header {
@@ -133,11 +135,11 @@ body {
 }
 
 .copy {
-  position: absolute;
-  bottom: calc(var(--index) * 2.5);
-  opacity: .45;
-  font-size: calc(var(--index) * .75);
-  letter-spacing: calc(var(--index) / 37.5);
+	position: absolute;
+	bottom: calc(var(--index) * 2.5);
+	opacity: .45;
+	font-size: calc(var(--index) * .75);
+	letter-spacing: calc(var(--index) / 37.5);
 }
 
 .content{
